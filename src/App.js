@@ -51,7 +51,7 @@ function App() {
       </div>
       <button
         className="convertBtn"
-        onClick={onClickConvert({
+        onClick={onClickConvert( {
           fromNumberSystem,
           toNumberSystem,
           fromNumber,
@@ -60,6 +60,25 @@ function App() {
       >
         CONVERT!
       </button>
+      {fromNumberSystem === 'ROM' || toNumberSystem === 'ROM' ? (
+          <ul className="romesInfo">
+            <li>I  = 1</li>
+            <li>IV = 4</li>
+            <li>V  = 5</li>
+            <li>IX = 9</li>
+            <li>X  = 10</li>
+            <li>XL = 40</li>
+            <li>L  = 50</li>
+            <li>XC = 90</li>
+            <li>C  = 100</li>
+            <li>CD = 400</li>
+            <li>D  = 500</li>
+            <li>CM = 900</li>
+            <li>M  = 1000</li>
+          </ul>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }
