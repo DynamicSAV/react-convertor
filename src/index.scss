@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 body {
-  background-color: #f8f8f8;
+  background-color: #e4e4e4;
 }
 
 * {
@@ -9,14 +9,18 @@ body {
   box-sizing: border-box;
 }
 .App {
-  display: flex;
-  justify-content:space-between;
   width: 900px;
   margin: 100px auto;
   background-color: #b9c9ff;
   padding: 25px;
   border-radius: 20px;
   box-shadow: 10px 10px 10px rgb(177, 163, 255);
+}
+
+.blocks {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .block {
@@ -61,5 +65,29 @@ body {
       background-color: #b499ff;
       color: #ffffff;
     }
+  }
+}
+
+.convertBtn {
+  transition: 0.1s ;
+  display: none;//block
+  position: relative;
+  width: 40%;
+  height: 100px;
+  margin: 0 auto;
+  color: #b499ff;
+  font-weight: bolder;
+  font-size: 50px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 3px solid rgba(177, 163, 235);
+  border-radius: 10px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }

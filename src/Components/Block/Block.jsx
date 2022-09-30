@@ -17,6 +17,7 @@ export const Block = ({ value, numberSystem, onChangeSystem, onChangeValue }) =>
     </ul>
     <textarea 
       onChange={(e) => onChangeValue(e.target.value)}
+      spellCheck="false"
       type="textarea"
       value={value}
       placeholder={0}
