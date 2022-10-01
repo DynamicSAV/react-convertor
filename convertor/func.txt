@@ -1,0 +1,50 @@
+
+<?php
+
+header("Access-Control-Allow-Origin: *");
+
+$romes = array(
+  "M" => 1000,
+  "CM" => 900,
+  "D" =>  500,
+  "CD" =>  400,
+  "C" => 100,
+  "XC" => 90,
+  "L" => 50,
+  "XL" => 40,
+  "X" => 10,
+  "IX" => 9,
+  "V" => 5,
+  "IV" => 4,
+  "I" => 1
+);
+
+function toRomanConvert($number, $romes)
+{
+  if ($number === 0) {
+    echo ('Что такое ноль?');
+  }
+  $result = '';
+  foreach ($romes as $item => $itemCount) {
+    while ($itemCount <= $number) {
+      $result = $result . $item;
+      $number = $number - $itemCount;
+    }
+  }
+  echo $result;
+}
+
+function forRomanConvert($romanNumber, $romes)
+{
+  $result = 0;
+  foreach ($romes as $item => $itemCount) {
+    while (strpos($romanNumber, $item) === 0) {
+      $result += $itemCount;
+      $romanNumber = mb_substr($romanNumber, 1, strlen($item) + 1);
+    }
+  }
+  echo ('result = ' . $result);
+}
+
+toRomanConvert(21, $romes);
+forRomanConvert('XXI', $romes);

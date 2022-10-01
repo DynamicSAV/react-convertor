@@ -25,12 +25,12 @@ function App() {
       .then((response) => response.text())
       .then((response) => {
         setToNumber(response);
-        console.log(response);
+        //console.log(response);
       });
   };
 
   useEffect(() => {
-    console.log('Загрузился');
+    //console.log('Загрузился');
   }, []);
 
   return (
